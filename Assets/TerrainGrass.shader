@@ -45,7 +45,7 @@ Shader "Hidden/TerrainEngine/Details/WavingDoublePass"
 			float4 localWavingGrassVert1 = ( lerpResult29 );
 			float In01 = 0;
 			WavingGrassVert(v);
-			v.vertex.xyz += localWavingGrassVert1.xyz;
+			v.vertex.xyz += localWavingGrassVert1.xyz * _SinTime.x;
 		}
 
 		void surf( Input i , inout SurfaceOutput o )
